@@ -102,6 +102,8 @@ test("async ancestry workflow wires the bounded selector into its historical pro
     "utf8",
   );
   assert.match(workflow, /fetch-depth: \$\{\{ matrix\.role == 'candidate' && '0' \|\| '1' \}\}/);
+  assert.match(workflow, /sparse-checkout: \|\s+\.github\/actions\/setup-wild-http-recovery/);
+  assert.match(workflow, /uses: \.\/qualification\/\.github\/actions\/setup-wild-http-recovery/);
   assert.match(
     workflow,
     /node --test qualification\/tests\/tooling\/async-component-ancestry-workflow\.test\.ts/,
