@@ -3763,6 +3763,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "svelte-poc"
+version = "0.474.0"
+dependencies = [
+ "oxc_ast",
+ "oxc_ast_visit",
+ "oxc_span",
+ "poc-support",
+ "vize_l0",
+ "vize_l1",
+ "vize_l2",
+ "vize_l3",
+ "vize_l4",
+ "vize_oxc_parser",
+]
+
+[[package]]
 name = "syn"
 version = "1.0.109"
 source = "registry+https://github.com/rust-lang/crates.io-index"
