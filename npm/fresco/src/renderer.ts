@@ -378,6 +378,19 @@ export function createRenderer(options: FrescoRendererOptions | (() => void) = {
       }
       return undefined;
     },
+    /** Find the live host node registered for one logical focus target. */
+    findNodeByFocusId(root: FrescoHostNode, focusId: string): FrescoHostNode | undefined {
+      const visit = (node: FrescoHostNode): FrescoHostNode | undefined => {
+        if (node.props.focusId === focusId) return node;
+        for (const child of node.children) {
+          const match = visit(child);
+          if (match) return match;
+        }
+        return undefined;
+      };
+
+      return visit(root);
+    },
     /** Detach and dispose a registered node and every descendant exactly once. */
     destroyRecursively(id: number): boolean {
       const node = tree.nodes.get(id);
