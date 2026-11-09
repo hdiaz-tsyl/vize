@@ -48,6 +48,7 @@ const definitions: Record<RustTestCohortId, Definition> = {
       "vize_parcel_sourcemap",
       "vize_incremental",
       "poc-support",
+      "python-poc",
       "solid-poc",
     ],
   },

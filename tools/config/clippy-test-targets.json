@@ -3,6 +3,7 @@
   "crates": [
     "davinci_harness",
     "poc-support",
+    "python-poc",
     "solid-poc",
     "vize_atelier_vapor",
     "vize_benchmarks",
